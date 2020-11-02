@@ -18,9 +18,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class WordAdapter extends ArrayAdapter<Earthquake> {
+public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
 
-    public WordAdapter(Activity context, ArrayList<Earthquake> earthquakes){
+    public EarthquakeAdapter(Activity context, ArrayList<Earthquake> earthquakes){
         super(context, 0, earthquakes);
     }
 
