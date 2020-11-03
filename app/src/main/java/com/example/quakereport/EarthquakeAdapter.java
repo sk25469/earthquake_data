@@ -40,7 +40,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         Earthquake currentEarthquake = getItem(position);
 
 
-        TextView magnitudeColorView = (TextView) listItemView.findViewById(R.id.earthquake_magnitude);
+        TextView magnitudeColorView = listItemView.findViewById(R.id.earthquake_magnitude);
         // Set the proper background color on the magnitude circle.
         // Fetch the background from the TextView, which is a GradientDrawable.
         GradientDrawable magnitudeCircle = (GradientDrawable) magnitudeColorView.getBackground();
@@ -52,7 +52,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         magnitudeCircle.setColor(magnitudeColor);
 
         // Find the TextView with view ID magnitude
-        TextView magnitudeView = (TextView) listItemView.findViewById(R.id.earthquake_magnitude);
+        TextView magnitudeView = listItemView.findViewById(R.id.earthquake_magnitude);
         // Format the magnitude to show 1 decimal place
         String formattedMagnitude = formatMagnitude(currentEarthquake.getEarthquakeMagnitude());
         // Display the magnitude of the current earthquake in that TextView
@@ -79,12 +79,12 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         }
 
         // Find the TextView with view ID location
-        TextView locationView = (TextView) listItemView.findViewById(R.id.primary_location);
+        TextView locationView = listItemView.findViewById(R.id.primary_location);
         // Display the primary location of the current earthquake in that TextView
         locationView.setText(primaryLocation);
 
         // Find the TextView with the offset location ID
-        TextView locationOffsetView = (TextView) listItemView.findViewById(R.id.location_offset);
+        TextView locationOffsetView = listItemView.findViewById(R.id.location_offset);
         // Display the offset location
         locationOffsetView.setText(locationOffset);
 
@@ -92,14 +92,14 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         Date dateObject = new Date(currentEarthquake.getEarthquakeDate());
 
         // Find the TextView with view ID date
-        TextView dateView = (TextView) listItemView.findViewById(R.id.earthquake_date);
+        TextView dateView = listItemView.findViewById(R.id.earthquake_date);
         // Format the date string (i.e. "Mar 3, 1984")
         String formattedDate = formatDate(dateObject);
         // Display the date of the current earthquake in that TextView
         dateView.setText(formattedDate);
 
         // Find the TextView with view ID time
-        TextView timeView = (TextView) listItemView.findViewById(R.id.earthquake_time);
+        TextView timeView = listItemView.findViewById(R.id.earthquake_time);
         // Format the time string (i.e. "4:30PM")
         String formattedTime = formatTime(dateObject);
         // Display the time of the current earthquake in that TextView
